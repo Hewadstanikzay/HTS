@@ -1,0 +1,7 @@
+# Example environment configuration for HewadTS AI Server
+
+# Add your OpenAI API Key here (do not commit the real key)
+OPENAI_API_KEY=your_openai_api_key_here
+
+# Port configuration
+PORT=3000
