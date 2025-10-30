@@ -1,0 +1,40 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hewad.TS",
+  "alternateName": "Hewad Tech & Spirituality",
+  "url": "https://hewadstanikzay.github.io/HTS/",
+  "logo": "https://hewadstanikzay.github.io/HTS/logo.png",
+  "founder": {
+    "@type": "Person",
+    "name": "Hewad Stanikzay",
+    "url": "https://hewadstanikzay.github.io/",
+    "jobTitle": "Founder & Developer",
+    "nationality": "Afghanistan",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Hewad Foundation"
+    }
+  },
+  "sameAs": [
+    "https://www.instagram.com/Hewad_Reflections",
+    "https://www.youtube.com/@Hewad_reflections",
+    "https://t.me/Hewad_Reflections"
+  ],
+  "description": "Hewad.TS is a creative and educational project founded by Hewad Stanikzay, combining technology, spirituality, and education for positive change across Afghanistan and Germany.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "Germany"
+  },
+  "keywords": [
+    "Hewad.TS",
+    "Hewad Stanikzay",
+    "Hewad Foundation",
+    "Hewad Reflections",
+    "Afghanistan",
+    "Germany",
+    "Technology",
+    "Spirituality",
+    "Education"
+  ]
+}
