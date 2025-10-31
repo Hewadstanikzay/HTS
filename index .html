@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTS AI Chat</title>
+  <style>
+    body { font-family: sans-serif; margin: 30px; }
+    input, button { font-size: 1rem; padding: 10px; margin: 5px; }
+    #reply { margin-top: 20px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>💬 HTS AI Chat</h2>
+  <input id="message" type="text" placeholder="Type your message..." size="50" />
+  <button id="send">Send</button>
+  <div id="reply"></div>
+
+  <script>
+    const sendBtn = document.getElementById("send");
+    const msgInput = document.getElementById("message");
+    const replyBox = document.getElementById("reply");
+
+    sendBtn.onclick = async () => {
+      const text = msgInput.value.trim();
+      if (!text) return alert("Enter a message first!");
+      replyBox.textContent = "⏳ Waiting for response...";
+
+      try {
+        const res = await fetch("/api/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            messages: [{ role: "user", content: text }],
+          }),
+        });
+        const data = await res.json();
+        replyBox.textContent = data.reply || JSON.stringify(data);
+      } catch (err) {
+        replyBox.textContent = "❌ Error: " + err.message;
+      }
+    };
+  </script>
+</body>
+</html>
