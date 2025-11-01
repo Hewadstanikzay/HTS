@@ -1,3 +1,12 @@
-git remote remove origin 2>/dev/null || true
-git remote add origin https://github.com/Hewadstanikzay/hewad-ai-server.git
-git push -u origin main
+cd /workspaces/HTS
+# if present, deinit/remove submodule metadata (safe to run)
+git submodule deinit -f hewad-ai-server 2>/dev/null || true
+git rm -f hewad-ai-server 2>/dev/null || true
+rm -rf .git/modules/hewad-ai-server 2>/dev/null || true
+
+# restore the folder (if it was removed, move your backup back) or recreate files here
+mkdir -p hewad-ai-server
+
+git add .
+git commit -m "Flatten: add hewad-ai-server as regular folder" || true
+# then choose Option 1 or 2 to push
