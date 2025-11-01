@@ -1,0 +1,6 @@
+cd server
+cp .env.example .env        # srv-d43544uuk2gs738o3m8g
+npm install
+npm run dev
+# test
+curl http://localhost:3000/api/health
