@@ -20,4 +20,4 @@ gr.ChatInterface(
     fn=chat,
     title="Hewad AI Chatbot",
     description="Multilingual chatbot (Dari / English / German)",
-).launch()
+).).launch(share=True)
