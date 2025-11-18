@@ -17,3 +17,6 @@ export default defineConfig({
     outDir: 'dist',
   },
 })
+"scripts": {
+  "build": "vite build"
+}
